@@ -1,0 +1,41 @@
+page-movie-popular-details {
+
+    .h1Sis {
+            color: orange;
+    }
+    .ionlabel{
+        color: orange;
+        font-size: 30px;
+    }
+    .ionlabelNumber{
+        color: orange;
+        font-size: 55px;
+        font-weight: bold;
+    }
+    .ionlabelTitle{
+        color: black;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .ionlabelSubTitle{
+        color: grey;
+        font-size: 15px;
+    }
+    .ionlabelSmall{
+        color: grey;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .ionlabelDate{
+        color: grey;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .rcornersMovies {
+        border-radius: 15px;
+        border: 2px solid orange;
+        padding: 20px;
+        // width: 200px;
+        height: 100px;
+      }
+}

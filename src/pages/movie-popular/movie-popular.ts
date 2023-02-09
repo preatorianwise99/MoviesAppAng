@@ -34,4 +34,10 @@ export class MoviePopularPage {
         console.log(this.arraySismos);
         console.log(this.arraySismos);
   });
+
+  eventosId(event, tms){
+      //console.log(tms);
+      console.log('eventosId SismosChilePage');
+      //this.navCtrl.push(SismosChileDetallePage,{'tms': tms});
+    }
 }
