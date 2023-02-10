@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MoviesPopularProvider } from '../../providers/movies-popular/movies-popular';
+import { HttpClient } from '@angular/common/http';
 /**
  * Generated class for the MoviePopularPage page.
  *
@@ -18,7 +19,7 @@ export class MoviePopularPage {
     arrayMovies:[any][];
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public movieServices: MoviesPopularProvider) {
+    public moviePopServices: MoviesPopularProvider) {
   }
 
   ionViewDidLoad() {
@@ -26,18 +27,18 @@ export class MoviePopularPage {
     this.getMoviesPop();
   }
   getMoviesPop() { //llamamos a la funcion getPost de nuestro servicio.
-      this.movieServices.getMoviesPopular()
+      this.moviePopServices.getMoviesPopular()
       .then(data => {
         this.arrayPosts = data;
-        this.arraySismos = this.arrayPosts.events;
+        this.arrayMovies = this.arrayPosts.events;
         //console.log(this.arrayPosts);
-        console.log(this.arraySismos);
-        console.log(this.arraySismos);
+        console.log(this.arrayMovies);
+        console.log(this.arrayMovies);
   });
-
-  eventosId(event, tms){
-      //console.log(tms);
-      console.log('eventosId SismosChilePage');
-      //this.navCtrl.push(SismosChileDetallePage,{'tms': tms});
-    }
+}
+  // eventosId(event, tms){
+  //     //console.log(tms);
+  //     console.log('eventosId SismosChilePage');
+  //     //this.navCtrl.push(SismosChileDetallePage,{'tms': tms});
+  //   }
 }

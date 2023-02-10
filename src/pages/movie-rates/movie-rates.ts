@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MoviesRatesProvider } from '../../providers/movies-rates/movies-rates';
+import { RatesProvider } from '../../providers/rates/rates';
+import { HttpClient } from '@angular/common/http';
 /**
 /**
  * Generated class for the MovieRatesPage page.
@@ -19,7 +21,8 @@ export class MovieRatesPage {
   arrayMovies:[any][];
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public movieServicesRates: MoviesRatesProvider) {
+    public movieServicesRates: MoviesRatesProvider,
+    public movieServicesTopRates: RatesProvider) {
   }
 
   ionViewDidLoad() {
@@ -27,13 +30,19 @@ export class MovieRatesPage {
     this.getMoviesTop();
   }
   getMoviesTop() { //llamamos a la funcion getPost de nuestro servicio.
-      this.movieServicesRates.getMoviesRates()
+      this.movieServicesTopRates.getMoviesRates()
       .then(data => {
         this.arrayPosts = data;
-        this.arraySismos = this.arrayPosts.events;
+        this.arrayMovies = this.arrayPosts.events;
         //console.log(this.arrayPosts);
-        console.log(this.arraySismos);
-        console.log(this.arraySismos);
+        console.log(this.arrayMovies);
+        console.log(this.arrayMovies);
   });
+}
+  // eventosId(event, tms){
+  //     //console.log(tms);
+  //     console.log('eventosId SismosChilePage');
+  //     //this.navCtrl.push(SismosChileDetallePage,{'tms': tms});
+  //   }
 
 }

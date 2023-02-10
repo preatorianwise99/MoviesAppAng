@@ -1,4 +1,11 @@
 page-home {
+  .theme-color {
+  background-color: #0c60ee !important;
+  color: #0c60ee;
+  }
+  .toolbar-background {
+  background-color: #0c60ee;
+  }
   .backgroudMovieapp{
     color: black;
   }
@@ -16,7 +23,7 @@ page-home {
       font-weight: bold;
   }
   .ionlabelTitle{
-      color: black;
+      color: white;
       font-size: 25px;
       font-weight: bold;
   }
